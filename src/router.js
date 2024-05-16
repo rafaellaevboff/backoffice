@@ -1,10 +1,18 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Login from './views/LoginUsuario.vue'
-import Sobre from './views/SobrePagina.vue'
+import PaginaInicial from './views/TelaInicial.vue'
 
 const routes = [
-    { path: '/', name: 'login', component: Login},
-    { path: '/sobre', name: 'sobre', component: Sobre},
+    {   
+        path: '/',
+        name: 'login',
+        component: Login
+    },
+    {   
+        path: '/paginaInicial',
+        name: 'paginaInicial',
+        component: PaginaInicial,
+    },
 ];
 
 const router = createRouter({
