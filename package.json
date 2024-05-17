@@ -10,7 +10,10 @@
   "dependencies": {
     "@mdi/font": "^7.4.47",
     "axios": "^1.6.8",
+    "body-parser": "^1.20.2",
     "core-js": "^3.8.3",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
     "vue": "^3.2.13",
     "vue-router": "4",
     "vuex": "^4.1.0"
@@ -45,5 +48,18 @@
     "last 2 versions",
     "not dead",
     "not ie 11"
-  ]
+  ],
+  "description": "```\r npm install\r ```",
+  "main": "babel.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafaellaevboff/backoffice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rafaellaevboff/backoffice/issues"
+  },
+  "homepage": "https://github.com/rafaellaevboff/backoffice#readme"
 }

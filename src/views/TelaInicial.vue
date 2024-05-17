@@ -4,9 +4,10 @@
 </template>
 <script>
 import ListaArquivos from './../components/ListaArquivos.vue'
-export default {
-  components: { ListaArquivos },
 
+export default {
+  name: 'PaginaInicial',
+  components: { ListaArquivos },
 }
 
 </script>

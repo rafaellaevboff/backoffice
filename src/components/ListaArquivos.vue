@@ -30,7 +30,7 @@
 </template>
 
 <script>
-// import { buscarDados } from '@/services/ArquivoService';
+import { buscarDados } from '@/services/ArquivoService';
 import ModalImagem from './ModalImagem.vue'
 
 export default {
@@ -47,15 +47,15 @@ export default {
 
     methods: {
         carregarDados() {
-            this.dados = [{ cpfcnpj: "5345345", telefone: "4554", email: "teste@gmail.com", fotoHabilitacao: "", fotoDocumentoVeiculo: "" }]
-            // buscarDados()
-            //     .then(dados => {
-            //         this.dados = dados.data;
-            //         console.log("Dados: ", this.dados);
-            //     })
-            //     .catch(error => {
-            //         console.error('Erro ao buscar dados:', error);
-            //     });
+            // this.dados = [{ cpfcnpj: "5345345", telefone: "4554", email: "teste@gmail.com", fotoHabilitacao: "", fotoDocumentoVeiculo: "" }]
+            buscarDados()
+                .then(dados => {
+                    this.dados = dados.data;
+                    console.log("Dados: ", this.dados);
+                })
+                .catch(error => {
+                    console.error('Erro ao buscar dados:', error);
+                });
         },
         abrirModalImagem(documento) {
             this.imageSrc = 'data:image/jpeg;base64,' + documento;
@@ -64,12 +64,7 @@ export default {
         fecharModal() {
             this.modalImagem = false;
         },
-        negarUsuario(usuario) {
-
-        },
-        aprovarUsuario(usuario) {
-
-        }
+        
     }
 };
 </script>

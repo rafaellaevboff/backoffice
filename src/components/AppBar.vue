@@ -20,24 +20,27 @@
 
 import { computed } from 'vue';
 import { useRouter } from 'vue-router';
+import { ref } from 'vue';
 
 export default {
   setup() {
     const router = useRouter();
     const isRotaLogin = computed(() => router.currentRoute.value.name === 'login');
+    const user = ref(JSON.parse(localStorage.getItem('user')));
+
+    const logout = () => {
+      localStorage.removeItem('user');
+      window.location.href = '/';
+    };
+
     return {
       isRotaLogin,
+      user,
+      logout
     };
   },
-
   computed: {
 
   },
-
-  methods: {
-    logout() {
-      console.log('Você clicou em sair');
-    }
-  }
 }
 </script>
