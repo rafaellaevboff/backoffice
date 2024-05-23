@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import axios from 'axios'
+import store from './store'
 
 // Vuetify
 import 'vuetify/styles'
@@ -19,5 +20,6 @@ const vuetify = createVuetify({
 const app = createApp(App);
 app.use(router);
 app.use(vuetify);
+app.use(store);
 app.config.globalProperties.$http = axios;
 app.mount('#app');
