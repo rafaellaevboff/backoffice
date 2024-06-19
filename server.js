@@ -20,7 +20,7 @@ app.post('/login', async (req, res) => {
   try {
     const { cpfcnpj, senha } = req.body;
     // Envie os dados de login para a API
-    const response = await axios.post('https://cargasbrasil.somee.com/api/login', {
+    const response = await axios.post('https://cargasbrasil.somee.com/api/User/Login', {
       cpfcnpj,
       senha
     });

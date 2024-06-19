@@ -50,6 +50,7 @@ export default {
         .then(response => {
           if (response.data.sucesso) {
             localStorage.setItem('login', JSON.stringify(response.data.sucesso));
+            localStorage.setItem('cpfcnpj', JSON.stringify(response.data.data.cpfcnpj));
             error.value = '';
             window.location.href = '/paginaInicial';
           } else {
