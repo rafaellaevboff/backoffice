@@ -1,6 +1,6 @@
 <template >
     <div v-if="dialogVisible">
-        <v-dialog v-model="dialogVisible" max-width="400" :overlay="overlayStyle">
+        <v-dialog v-model="dialogVisible" max-width="550" :overlay="overlayStyle">
             <v-card>
                 <v-toolbar color="primary" dark>
                     <v-spacer></v-spacer>
@@ -11,7 +11,6 @@
                 <v-img :src="imageSrc" contain />
             </v-card>
         </v-dialog>
-        <div class="overlay" @click="fecharModal" v-if="dialogVisible"></div>
     </div>
 </template>
 

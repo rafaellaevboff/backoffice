@@ -26,7 +26,7 @@
 
         <v-progress-circular v-if="carregando" indeterminate color="primary" style="margin-top: 10px;"/>
 
-        <ModalImagem :value="modalImagem" :imageSrc="imageSrc" @input="fecharModal"></ModalImagem>
+        <ModalImagem :value="modalImagem" :imageSrc="imageSrc" @input="fecharModal" ></ModalImagem>
     </div>
 </template>
 
